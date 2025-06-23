@@ -1,2 +1,2 @@
 # ARCS
-Automated Robotic Circuit Scanner
+Automated Robotic Circuit Scanner by FRC Team 112

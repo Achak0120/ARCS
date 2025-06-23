@@ -1,0 +1,25 @@
+# Core RobotPy Libraries
+robotpy[all]         # includes wpilib, wpimath, hal, commands2, sim
+
+# NetworkTables (for comms with roboRIO or co-processors)
+pyntcore>=2023.4.3
+
+# Serial communication (CAN devices, Arduino, etc.)
+pyserial>=3.5
+
+# Optional: Useful for GPS/NMEA parsing
+pynmea2>=1.18.0
+
+# Data handling and visualization
+pandas>=2.0.3
+matplotlib>=3.7.1
+plotly>=5.15.0
+
+# GUI
+PyQt5>=5.15.9
+
+# For logging / timestamps
+loguru>=0.7.0
+
+# Debugging + testing
+pytest>=7.4.0
