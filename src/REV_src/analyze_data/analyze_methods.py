@@ -1,7 +1,5 @@
 import pandas as pd
 import matplotlib.pyplot as plt
-import plotly.express as px
-from loguru import logger
 import os
 import datetime
 import numpy as np
@@ -19,7 +17,7 @@ def clean_data(log_path: str) -> pd.DataFrame:
     pd.set_option('display.max_columns', None)
     pd.set_option('display.width', None)
     pd.set_option('display.max_colwidth', None)
-    print(df)
+    return df
 
 
 def brown_out_detection(df, voltage_col=None, threshold=7.0):
@@ -42,6 +40,9 @@ def brown_out_detection(df, voltage_col=None, threshold=7.0):
     for idx, voltage in enumerate(voltages):
         if pd.notna(voltage) and voltage < threshold:
             print(f"Brownout likely at row {idx}: Voltage = {voltage:.2f}V (Threshold = {threshold}V)")
+        else:
+            print(f"{voltage_col} column looks good!")
 
-    
-    
+# Testing Sections
+brown_out_detection(clean_data(r'C:\Users\achak\OneDrive\Desktop\ARCS_OFFICIAL_MAIN\ARCS\src\REV_src\analyze_data\full_output.csv'))
+
